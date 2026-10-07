@@ -1,5 +1,6 @@
---// GUI TRANSLATOR VI/EN - NO EXTERNAL SCRIPT
---// Fixed Cartoon Font - Compact Version
+--// NHAT GUI TRANSLATOR
+--// VI/EN - NO EXTERNAL SCRIPT
+--// Fixed Cartoon Font + Anti Freeze
 
 local Players = game:GetService("Players")
 local CoreGui = game:GetService("CoreGui")
@@ -100,28 +101,26 @@ local DICT = {
 	["Failed"]="Thất bại",["Warning"]="Cảnh báo",["Notice"]="Thông báo",["Active"]="Đang hoạt động",
 	["Inactive"]="Không hoạt động",["Running"]="Đang chạy",["Stopped"]="Đã dừng",["Ready"]="Sẵn sàng",
 	["Waiting"]="Đang chờ",["Please Wait"]="Vui lòng chờ",["Please wait"]="Vui lòng chờ",["Connected"]="Đã kết nối",
-	["Disconnected"]="Đã ngắt kết nối",["Not Found"]="Không tìm thấy",["Found"]="Đã tìm thấy",["Finished"]="Đã hoàn tất",
-	["Completed"]="Hoàn thành",
+	["Disconnected"]="Đã ngắt kết nối",["Not Found"]="Không tìm thấy",["Found"]="Đã tìm thấy",
+	["Finished"]="Đã hoàn tất",["Completed"]="Hoàn thành",
 
 	--// RARITY
 	["Common"]="Thường",["Uncommon"]="Không phổ biến",["Rare"]="Hiếm",["Epic"]="Sử thi",["Legendary"]="Huyền thoại",
 	["Mythic"]="Thần thoại",["Mythical"]="Thần thoại",["Cosmic"]="Vũ trụ",["Secret"]="Bí mật",
 	["Eternal"]="Vĩnh hằng",["Divine"]="Thần thánh",
 }
---// UI
+--// EXTRA DICTIONARY
 DICT["UI"]="Giao diện"; DICT["Interface"]="Giao diện"; DICT["Menu"]="Menu"; DICT["Main Menu"]="Menu chính"
 DICT["Panel"]="Bảng"; DICT["Tab"]="Tab"; DICT["Tabs"]="Các Tab"; DICT["Button"]="Nút"; DICT["Input"]="Ô nhập"
 DICT["Text"]="Văn bản"; DICT["Name"]="Tên"; DICT["Title"]="Tiêu đề"; DICT["Description"]="Mô tả"
 DICT["Information"]="Thông tin"; DICT["Info"]="Thông tin"; DICT["Details"]="Chi tiết"
 DICT["Search Player"]="Tìm người chơi"; DICT["Search Item"]="Tìm vật phẩm"
 
---// SETTINGS
 DICT["Theme"]="Chủ đề"; DICT["Color"]="Màu"; DICT["Size"]="Kích thước"; DICT["Position"]="Vị trí"
 DICT["Distance"]="Khoảng cách"; DICT["Height"]="Chiều cao"; DICT["Width"]="Chiều rộng"
 DICT["Transparency"]="Độ trong suốt"; DICT["Opacity"]="Độ mờ"; DICT["Keybind"]="Phím tắt"
 DICT["Keybinds"]="Phím tắt"; DICT["Hotkey"]="Phím nóng"; DICT["Control"]="Điều khiển"; DICT["Controls"]="Điều khiển"
 
---// EXTRA
 DICT["Auto Collect"]="Tự động thu thập"; DICT["Auto Collect Fruit"]="Tự động nhặt trái"
 DICT["Auto Collect Chest"]="Tự động nhặt rương"; DICT["Auto Collect Money"]="Tự động nhặt tiền"
 DICT["Auto Collect Fragments"]="Tự động nhặt mảnh"; DICT["Auto Store Fruit"]="Tự động cất trái"
@@ -131,96 +130,118 @@ DICT["Find Chest"]="Tìm rương"; DICT["Find Player"]="Tìm người chơi"; DI
 DICT["Infinite Jump"]="Nhảy vô hạn"; DICT["Infinite Health"]="Máu vô hạn"; DICT["Fast Attack"]="Đánh nhanh"
 DICT["Auto Attack"]="Tự động đánh"; DICT["Kill Aura"]="Aura giết"
 
---// FYY EXTRA
-DICT["Drop Stolen Egg"]="Thả trứng đã trộm"; DICT["Go To Forest"]="Đi đến rừng"; DICT["Go To Last Area"]="Đi đến khu vực cuối"
-DICT["Steal From Other Player"]="Trộm từ người chơi khác"; DICT["Instant Steal"]="Trộm ngay"
-DICT["Instant Drop"]="Thả ngay"; DICT["Carry Egg"]="Mang trứng"; DICT["Drop Egg"]="Thả trứng"
-
---// CHILLI EXTRA
-DICT["Auto Mech"]="Tự động Mech"; DICT["Mech Boss"]="Mech Boss"; DICT["Mech Portal"]="Cổng Mech"
-DICT["Next Portal"]="Cổng tiếp theo"; DICT["Quick Keys"]="Phím nhanh"; DICT["Quick Key"]="Phím nhanh"
-DICT["Main Weapon"]="Vũ khí chính"; DICT["Scrambler"]="Scrambler"; DICT["Swap Weapons"]="Đổi vũ khí"
-DICT["Two Weapons"]="Hai vũ khí"; DICT["Weapon Hold"]="Giữ vũ khí"; DICT["Boss Hop"]="Hop Boss"
-DICT["Auto Boss Hop"]="Tự động Hop Boss"
-
---// TIME
 DICT["Second"]="Giây"; DICT["Seconds"]="Giây"; DICT["Minute"]="Phút"; DICT["Minutes"]="Phút"
 DICT["Hour"]="Giờ"; DICT["Hours"]="Giờ"
 
---// DIRECTIONS
-DICT["Left"]="Trái"; DICT["Right"]="Phải"; DICT["Up"]="Lên"; DICT["Down"]="Xuống"; DICT["Forward"]="Tiến"
-DICT["Backward"]="Lùi"; DICT["Front"]="Phía trước"; DICT["Back"]="Phía sau"; DICT["Above"]="Bên trên"
-DICT["Below"]="Bên dưới"; DICT["Near"]="Gần"; DICT["Far"]="Xa"
+DICT["Left"]="Trái"; DICT["Right"]="Phải"; DICT["Up"]="Lên"; DICT["Down"]="Xuống"
+DICT["Forward"]="Tiến"; DICT["Backward"]="Lùi"; DICT["Front"]="Phía trước"; DICT["Back"]="Phía sau"
+DICT["Above"]="Bên trên"; DICT["Below"]="Bên dưới"; DICT["Near"]="Gần"; DICT["Far"]="Xa"
 
---// MISC
 DICT["Misc"]="Khác"; DICT["Miscellaneous"]="Linh tinh"; DICT["Visual"]="Hiển thị"; DICT["Visuals"]="Hiển thị"
-DICT["Debug"]="Debug"; DICT["Developer"]="Nhà phát triển"; DICT["Credits"]="Thông tin tác giả"; DICT["Author"]="Tác giả"
-DICT["Created By"]="Được tạo bởi"; DICT["Made By"]="Được tạo bởi"; DICT["Update Available"]="Có bản cập nhật"
-DICT["New Update"]="Bản cập nhật mới"; DICT["Check Update"]="Kiểm tra cập nhật"; DICT["Latest Version"]="Phiên bản mới nhất"
+DICT["Debug"]="Debug"; DICT["Developer"]="Nhà phát triển"; DICT["Credits"]="Thông tin tác giả"
+DICT["Author"]="Tác giả"; DICT["Created By"]="Được tạo bởi"; DICT["Made By"]="Được tạo bởi"
+DICT["Update Available"]="Có bản cập nhật"; DICT["New Update"]="Bản cập nhật mới"
+DICT["Check Update"]="Kiểm tra cập nhật"; DICT["Latest Version"]="Phiên bản mới nhất"
 
---// SORT DICTIONARY
+--// SORT
 local Keys = {}
 for k in pairs(DICT) do Keys[#Keys + 1] = k end
 table.sort(Keys,function(a,b) return #a > #b end)
 
+local function IsTextObject(obj) return obj:IsA("TextLabel") or obj:IsA("TextButton") or obj:IsA("TextBox") end
 local function EscapePattern(s) return s:gsub("(%W)","%%%1") end
 
+--// LƯU TEXT GỐC
+local OriginalText = {}
+local OriginalPlaceholder = {}
+local Updating = {}
+
 local function TranslateText(text)
-	if not TranslationEnabled or type(text) ~= "string" or text == "" then return text end
+	if type(text) ~= "string" or text == "" then return text end
 	if DICT[text] then return DICT[text] end
 	local result = text
-	for _,k in ipairs(Keys) do result = result:gsub("%f[%a]"..EscapePattern(k).."%f[%A]",DICT[k]) end
+	for _,key in ipairs(Keys) do
+		result = result:gsub("%f[%a]"..EscapePattern(key).."%f[%A]",DICT[key])
+	end
 	return result
 end
-
---// FONT + TRANSLATE
-local function IsTextObject(obj) return obj:IsA("TextLabel") or obj:IsA("TextButton") or obj:IsA("TextBox") end
 
 local function ForceCartoon(obj)
 	if not IsTextObject(obj) then return end
 	pcall(function() obj.Font = TARGET_FONT end)
 end
 
-local function TranslateObject(obj)
+local function SaveOriginal(obj)
 	if not IsTextObject(obj) then return end
-	ForceCartoon(obj)
-	if not TranslationEnabled then return end
-	pcall(function()
-		if obj.Text and obj.Text ~= "" then obj.Text = TranslateText(obj.Text) end
-	end)
-	pcall(function()
-		if obj.PlaceholderText and obj.PlaceholderText ~= "" then obj.PlaceholderText = TranslateText(obj.PlaceholderText) end
-	end)
+	if OriginalText[obj] == nil then OriginalText[obj] = obj.Text end
+	if obj:IsA("TextBox") and OriginalPlaceholder[obj] == nil then OriginalPlaceholder[obj] = obj.PlaceholderText end
 end
 
-local Connections = {}
+local function ApplyLanguage(obj)
+	if not IsTextObject(obj) then return end
+	ForceCartoon(obj)
+	SaveOriginal(obj)
+
+	if Updating[obj] then return end
+	Updating[obj] = true
+
+	if TranslationEnabled then
+		pcall(function() obj.Text = TranslateText(OriginalText[obj]) end)
+		if obj:IsA("TextBox") then pcall(function() obj.PlaceholderText = TranslateText(OriginalPlaceholder[obj] or "") end) end
+	else
+		pcall(function() obj.Text = OriginalText[obj] or obj.Text end)
+		if obj:IsA("TextBox") then pcall(function() obj.PlaceholderText = OriginalPlaceholder[obj] or obj.PlaceholderText end) end
+	end
+
+	Updating[obj] = nil
+end
+
+--// HOOK TỪNG OBJECT
+local Hooked = {}
 
 local function HookObject(obj)
 	if not IsTextObject(obj) then return end
-	TranslateObject(obj)
-	if Connections[obj] then return end
-	Connections[obj] = true
+	ForceCartoon(obj)
+	SaveOriginal(obj)
+
+	if Hooked[obj] then
+		ApplyLanguage(obj)
+		return
+	end
+
+	Hooked[obj] = true
 
 	obj:GetPropertyChangedSignal("Font"):Connect(function()
 		ForceCartoon(obj)
 	end)
 
 	obj:GetPropertyChangedSignal("Text"):Connect(function()
-		task.defer(function()
-			if obj.Parent then TranslateObject(obj) end
-		end)
+		if Updating[obj] then return end
+		if not obj.Parent then return end
+
+		-- Khi GUI gốc thay đổi text, cập nhật lại text gốc
+		OriginalText[obj] = obj.Text
+		if TranslationEnabled then
+			ApplyLanguage(obj)
+		else
+			ForceCartoon(obj)
+		end
 	end)
 
 	if obj:IsA("TextBox") then
 		obj:GetPropertyChangedSignal("PlaceholderText"):Connect(function()
-			task.defer(function()
-				if obj.Parent then TranslateObject(obj) end
-			end)
+			if Updating[obj] then return end
+			if not obj.Parent then return end
+			OriginalPlaceholder[obj] = obj.PlaceholderText
+			if TranslationEnabled then ApplyLanguage(obj) end
 		end)
 	end
+
+	ApplyLanguage(obj)
 end
 
-local HookedContainers = {}
+--// HOOK CONTAINER
+local HookedContainer = {}
 
 local function HookContainer(container)
 	if not container then return end
@@ -229,15 +250,15 @@ local function HookContainer(container)
 		HookObject(obj)
 	end
 
-	if not HookedContainers[container] then
-		HookedContainers[container] = true
-		container.DescendantAdded:Connect(function(obj)
-			task.defer(function()
-				HookObject(obj)
-				for _,child in ipairs(obj:GetDescendants()) do HookObject(child) end
-			end)
+	if HookedContainer[container] then return end
+	HookedContainer[container] = true
+
+	container.DescendantAdded:Connect(function(obj)
+		task.defer(function()
+			HookObject(obj)
+			for _,child in ipairs(obj:GetDescendants()) do HookObject(child) end
 		end)
-	end
+	end)
 end
 
 local function GetHUI()
@@ -249,12 +270,15 @@ end
 
 local function HookAllGui()
 	pcall(function() HookContainer(CoreGui) end)
-	pcall(function() HookContainer(LP:FindFirstChildOfClass("PlayerGui")) end)
-	local hui = GetHUI()
-	if hui then pcall(function() HookContainer(hui) end) end
+
+	local PlayerGui = LP:FindFirstChildOfClass("PlayerGui")
+	if PlayerGui then pcall(function() HookContainer(PlayerGui) end) end
+
+	local HUI = GetHUI()
+	if HUI then pcall(function() HookContainer(HUI) end) end
 end
 
---// LANGUAGE MENU
+--// MENU
 local old = CoreGui:FindFirstChild("NhatTranslator")
 if old then old:Destroy() end
 
@@ -336,6 +360,7 @@ end)
 UserInputService.InputChanged:Connect(function(input)
 	if not dragging then return end
 	if input.UserInputType ~= Enum.UserInputType.MouseMovement and input.UserInputType ~= Enum.UserInputType.Touch then return end
+
 	local delta = input.Position - dragStart
 	Main.Position = UDim2.new(startPos.X.Scale,startPos.X.Offset + delta.X,startPos.Y.Scale,startPos.Y.Offset + delta.Y)
 end)
@@ -344,16 +369,17 @@ UserInputService.InputEnded:Connect(function(input)
 	if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then dragging = false end
 end)
 
---// LANGUAGE SWITCH
+--// ĐỔI NGÔN NGỮ
 local function SetLanguage(lang)
 	TranslationEnabled = lang == "vi"
-	HookAllGui()
 
-	for _,container in ipairs({CoreGui,LP:FindFirstChildOfClass("PlayerGui"),GetHUI()}) do
+	local containers = {CoreGui,LP:FindFirstChildOfClass("PlayerGui"),GetHUI()}
+
+	for _,container in ipairs(containers) do
 		if container then
 			for _,obj in ipairs(container:GetDescendants()) do
 				if IsTextObject(obj) then
-					if TranslationEnabled then TranslateObject(obj) else ForceCartoon(obj) end
+					ApplyLanguage(obj)
 				end
 			end
 		end
@@ -372,22 +398,5 @@ EN.MouseButton1Click:Connect(function()
 	SetLanguage("en")
 end)
 
---// AUTO HOOK
+--// START
 HookAllGui()
-
-task.spawn(function()
-	while task.wait(1) do
-		HookAllGui()
-		if TranslationEnabled then
-			for _,container in ipairs({CoreGui,LP:FindFirstChildOfClass("PlayerGui"),GetHUI()}) do
-				if container then
-					for _,obj in ipairs(container:GetDescendants()) do
-						if IsTextObject(obj) then
-							ForceCartoon(obj)
-						end
-					end
-				end
-			end
-		end
-	end
-end)
